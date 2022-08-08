@@ -35,3 +35,17 @@ end
  "The seat is #{ticket.seat}, " +
  "and the cost is $#{"%.2f." % ticket.price}" 
 
+# ticket also have some true/false--Boolean- information about themselves
+
+# 2.2.4 Ticket availability: expressing Boolean state in a method
+# Now let's endow a ticket object of the knowledge of it's own availability status
+
+def ticket.available?
+    false
+end
+
+if ticket.available?
+    puts "You are luck"
+else
+    puts "The ticket has been sold"
+end
